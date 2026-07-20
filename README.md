@@ -19,4 +19,35 @@ pnpm install
 pnpm start
 ```
 
-Run `pnpm build` for a production build and `pnpm lint` to check PHP and JavaScript.
+Run `pnpm build` for a production build and `pnpm lint` to check PHP and TypeScript.
+
+## Releases
+
+GitHub Actions validates every pull request and push to `main`. Pushing a semantic version
+tag that matches both the plugin header and `package.json` creates a GitHub release with an
+installable plugin ZIP:
+
+```sh
+git tag v0.1.0
+git push origin v0.1.0
+```
+
+Run `pnpm release:build` to create the same ZIP locally in `build/`.
+
+## Theme colors
+
+Themes can replace the default palette through `theme.json`:
+
+```json
+{
+  "settings": {
+    "custom": {
+      "sidebarColors": {
+        "colors": ["#d63638", "#3858e9"]
+      }
+    }
+  }
+}
+```
+
+The array replaces the defaults completely. Three- and six-digit hexadecimal colors are supported.

@@ -1,0 +1,50 @@
+.block-editor-block-settings-menu__popover .sidebar-colors-menu-separator {
+	border-top: 1px solid #ccc;
+	height: 0;
+	margin: 8px -8px;
+	pointer-events: none;
+}
+
+.sidebar-colors-swatches {
+	--sidebar-colors-clear-background: #fff;
+	--sidebar-colors-clear-slash: #cc1818;
+
+	display: flex;
+	gap: 6px;
+	padding: 8px 0 8px 12px;
+}
+
+.sidebar-colors-swatch.components-button {
+	background-color: var(--sidebar-colors-swatch-color);
+	border: 0;
+	border-radius: 50%;
+	box-shadow: inset 0 0 0 1px rgb(0 0 0 / 18%);
+	height: 20px;
+	min-width: 20px;
+	padding: 0;
+	width: 20px;
+}
+
+.sidebar-colors-swatch.components-button:hover:not(:disabled) {
+	background-color: var(--sidebar-colors-swatch-color);
+	box-shadow: inset 0 0 0 2px rgb(0 0 0 / 28%);
+}
+
+.sidebar-colors-swatch.components-button.is-pressed {
+	background-color: var(--sidebar-colors-swatch-color);
+	box-shadow:
+		0 0 0 2px #fff,
+		0 0 0 4px var(--wp-admin-theme-color);
+}
+
+.sidebar-colors-swatch--clear.components-button,
+.sidebar-colors-swatch--clear.components-button:hover:not(:disabled),
+.sidebar-colors-swatch--clear.components-button.is-pressed {
+	background-color: var(--sidebar-colors-clear-background);
+	background-image: linear-gradient(45deg, transparent 44%, var(--sidebar-colors-clear-slash) 44%, var(--sidebar-colors-clear-slash) 56%, transparent 56%);
+}
+
+.block-editor-list-view-leaf > td,
+.block-editor-list-view-leaf .block-editor-block-icon {
+	transition: background-color 100ms ease-out;
+}

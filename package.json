@@ -12,21 +12,28 @@
     "start": "10up-toolkit start",
     "watch": "10up-toolkit watch",
     "build": "10up-toolkit build",
-    "lint": "pnpm lint:js && pnpm lint:php",
+    "lint": "pnpm typecheck && pnpm lint:js && pnpm lint:css && pnpm lint:php",
+    "typecheck": "tsc --noEmit",
     "lint:js": "10up-toolkit lint-js",
+    "lint:css": "10up-toolkit lint-style",
     "lint:php": "composer lint",
     "format:js": "10up-toolkit format-js",
     "format:php": "composer format",
+    "release:build": "pnpm build && ./bin/build-release.sh",
     "clean": "rm -rf dist"
   },
   "devDependencies": {
     "10up-toolkit": "^6.5.1",
+    "@types/react": "18.3.28",
+    "@types/wordpress__block-editor": "15.0.6",
     "terser-webpack-plugin": "^5.6.1",
+    "typescript": "5.3.3",
     "webpack": "5.104.1"
   },
   "10up-toolkit": {
     "entry": {
-      "editor": "./assets/js/editor.js"
+      "editor": "./assets/js/editor.tsx",
+      "editor-styles": "./assets/css/editor.css"
     }
   },
   "pnpm": {
@@ -37,5 +44,14 @@
       "esbuild",
       "sharp"
     ]
+  },
+  "dependencies": {
+    "@wordpress/block-editor": "16.0.1-next.v.202607070741.0",
+    "@wordpress/components": "37.0.1-next.v.202607070741.0",
+    "@wordpress/data": "10.50.1-next.v.202607070741.0",
+    "@wordpress/element": "8.2.1-next.v.202607070741.0",
+    "@wordpress/hooks": "4.50.1-next.v.202607070741.0",
+    "@wordpress/i18n": "6.23.1-next.v.202607070741.0",
+    "@wordpress/plugins": "7.50.1-next.v.202607070741.0"
   }
 }
