@@ -40,7 +40,7 @@ archive="$build_dir/sidebar-colors-$release_version.zip"
 rm -rf "$build_dir"
 mkdir -p "$package_dir"
 
-cp LICENSE README.md sidebar-colors.php "$package_dir/"
+cp LICENSE README.md screenshot.png sidebar-colors.php "$package_dir/"
 cp -R dist src "$package_dir/"
 
 (

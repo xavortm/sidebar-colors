@@ -2,6 +2,8 @@
 
 A focused WordPress plugin for color controls in the block editor sidebar.
 
+![Sidebar Colors controls in the block settings menu and List View](screenshot.png)
+
 ## Requirements
 
 - WordPress 6.7 or newer
