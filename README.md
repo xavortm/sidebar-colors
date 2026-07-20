@@ -4,6 +4,29 @@ A focused WordPress plugin for color controls in the block editor sidebar.
 
 ![Sidebar Colors controls in the block settings menu and List View](screenshot.png)
 
+## What it does
+
+Sidebar Colors adds a small color palette to each block's options menu and displays the
+selected color on that block's icon in List View. Colors are saved with the content as
+editorial metadata and do not change the published page's design.
+
+Colors also flow down through nested blocks. Color a Group, Cover, Columns, or another
+container block to identify the whole section at a glance, while still allowing individual
+blocks inside it to use their own colors.
+
+## Example workflows
+
+- Mark the block you're working on in orange and completed blocks in green to help yourself
+  or other authors follow the page's progress.
+- Use red for copy that needs review, yellow for content awaiting approval, and green for
+  content that is ready to publish.
+- Give each large page section a different color so it is easier to find and navigate in
+  List View.
+- Color parent blocks to show which sections belong to different authors, teams, or stages
+  of an editorial workflow.
+- Flag blocks that still need links, images, accessibility checks, or other finishing work
+  without adding notes to the visible page.
+
 ## Requirements
 
 - WordPress 6.7 or newer
