@@ -60,8 +60,19 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
+          notes="$(cat <<'EOF'
+          ## Installation
+
+          1. Download the **Sidebar Colors** ZIP from **Assets** below. Do not download the automatically generated source archives.
+          2. In WordPress, go to **Plugins > Add New Plugin > Upload Plugin**.
+          3. Select the ZIP, then choose **Install Now** and **Activate Plugin**.
+          4. Open the block editor and use the color swatches at the bottom of a block's options menu.
+          EOF
+          )"
+
           gh release create "$GITHUB_REF_NAME" \
             "${{ steps.package.outputs.archive }}#Sidebar Colors ${{ steps.package.outputs.version }}" \
             --generate-notes \
+            --notes "$notes" \
             --title "Sidebar Colors ${{ steps.package.outputs.version }}" \
             --verify-tag

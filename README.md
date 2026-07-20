@@ -8,6 +8,18 @@ A focused WordPress plugin for color controls in the block editor sidebar.
 
 - WordPress 6.7 or newer
 - PHP 8.2 or newer
+
+## Installation
+
+1. Download `sidebar-colors-*.zip` from the assets on the
+   [latest release](https://github.com/xavortm/sidebar-colors/releases/latest). Do not use
+   GitHub's automatically generated source archives.
+2. In WordPress, go to **Plugins > Add New Plugin > Upload Plugin**.
+3. Select the downloaded ZIP, then choose **Install Now** and **Activate Plugin**.
+4. Open the block editor and use the color swatches at the bottom of a block's options menu.
+
+## Development requirements
+
 - Node.js 24
 - pnpm 10.28.2
 - Composer 2
