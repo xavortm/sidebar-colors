@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<ruleset name="Sidebar Colors">
+	<description>PHP coding standards for Sidebar Colors.</description>
+
+	<file>sidebar-colors.php</file>
+	<file>src</file>
+
+	<arg name="extensions" value="php"/>
+	<arg value="sp"/>
+
+	<rule ref="WordPress">
+		<exclude name="WordPress.Files.FileName.InvalidClassFileName"/>
+		<exclude name="WordPress.Files.FileName.NotHyphenatedLowercase"/>
+	</rule>
+
+	<rule ref="WordPress.WP.I18n">
+		<properties>
+			<property name="text_domain" type="array">
+				<element value="sidebar-colors"/>
+			</property>
+		</properties>
+	</rule>
+</ruleset>
